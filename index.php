@@ -13,7 +13,7 @@ require_once './service/config.php';
 </head>
 <body>
     <p>
-        Anjay
+        Sudah selesai
     </p>
 </body>
 </html>
