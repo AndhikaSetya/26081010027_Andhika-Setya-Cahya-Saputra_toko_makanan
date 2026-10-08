@@ -1,3 +1,90 @@
-p {
-  font-size: 1000px;
+:root {
+    --bg-color: #5C7057;
+    --card-bg: #D1EDD3;
+    --primary: #5C7057;
+    --secondary: #89A482;
+    --accent: #ACC5A6;
+    --border: #89A482;
+    --text: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text);
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #D1EDD3;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background-color: var(--accent);
+    color: var(--primary);
+}
+
+tr:hover {
+    background-color: var(--secondary);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Supaya responsif pada desktop dan mobile */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 }
